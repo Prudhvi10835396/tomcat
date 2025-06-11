@@ -1,0 +1,24 @@
+ yum update –y
+    2  wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    3  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    4  yum upgrade
+    5  yum install java-17-amazon-corretto -y
+    6  yum install jenkins -y
+    7  systemctl enable jenkins
+    8  systemctl start jenkins
+    9  yum install git -y -> now go to instance and from there copy ip address and add :8080
+    then we should add webhook in github repo by copying jenkins web url and profile security add token.
+    cat /var/lib/jenkins/secrets/initialAdminPassword -> here we copy the password and paste it in the jenkins webpage
+    here on wards yours jenkins account is created and then add item and add the configuration with github url. save and apply
+    click build now.
+    cd /var/lib/jenkins/workspace/apache this is from console output of item
+    after this do some changes in github repo in github and enter build now in jenkins and check the update is done in git.
+    #################################################### this is till jenkins creation for free project
+    ####now for maven project
+    goto manage jenkins -> plugins -> install maven, git, deployer and then restart
+    cd -> by this you will come to jenkins by now like root@jenkins ~
+  yum install maven
+  yum install java*
+  mvn -v -> here we get the maven path and java path add them in manage jenkins -> tools 
+  yum install git -y
+    
