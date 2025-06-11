@@ -1,0 +1,28 @@
+TOMCAT-SERVER
+* first 3 instances dev-server , jenkins-server , web-server , tomcat-server
+dev-server = t2.micro , size = 12
+jenkins-server = t2.medium , size = 8
+tomcat-server = t2,micro , size = 10
+ON DEV-SERVER 
+sudo su -
+set hostname - dev-server.example.com
+bash
+yum install git 
+CREATE A PUBLIC REPO AND CLONE
+ 1  yum install git
+    2  history
+    3  git clone git@github.com:sanjayguruji/web-repo.git
+    4  git clone https://github.com/sanjayguruji/web-repo.git
+    5  ssh-keygen
+    6  cd .ssh/
+    7  cat id_rsa.pub (add the ssh key to the github)
+    8  cd
+    9  cd web-repo
+   10  git init
+   11  git add .
+   12  git commit -m devops -a
+   13  git branch -M main
+   14  git remote add origin git@github.com:mansi-lti/tomcat.git
+   15  git remote remove origin
+   16  git remote add origin git@github.com:mansi-lti/tomcat.git
+   17  git push origin main
