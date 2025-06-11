@@ -1,0 +1,30 @@
+   yum install java*
+    2  yum install wget
+    3  wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.106/bin/apache-tomcat-9.0.106.tar.gz
+    4  tar -xzf apache-tomcat-9.0.106.tar.gz
+    5  tar -xzvf apache-tomcat-9.0.106.tar.gz
+    6  cd apache-tomcat-9.0.106/
+    7  cd bin/
+    8  chmod +x startup.sh
+    9  chmod +x shutdown.sh
+   10  cd ..
+   11  cd conf/
+   12  ll
+   13  vim tomcat-users.xml
+   14  vi ./webapps/examples/META-INF/context.xml
+   15  cd ..
+   16  vi ./webapps/examples/META-INF/context.xml
+   17  vi ./webapps/host-manager/META-INF/context.xml
+   18  vi ./webapps/manager/META-INF/context.xml
+   19   vi ./webapps/examples/META-INF/context.xml
+   20  cd apache-tomcat-9.0.106/
+   21  cd
+   22  cd /bin
+   23  yum install java
+   24  ./startup.sh
+  later we have to go to the jenkins and in the maven project we add the post build actions which are war and 
+ do like this in war :  **/*.war
+context-path :/
+add containers 
+credentials : deployer/deployer
+paste the tomcat url http://34.229.238.236:8080/
