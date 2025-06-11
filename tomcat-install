@@ -10,13 +10,17 @@
    10  cd ..
    11  cd conf/
    12  ll
-   13  vim tomcat-users.xml
-   14  vi ./webapps/examples/META-INF/context.xml
-   15  cd ..
+   13  vim tomcat-users.xml -> add the roles here down 
+            <role rolename="manager-gui"/>
+<role rolename="manager-script"/>
+<role rolename="manager-jmx"/>
+<role rolename="manager-status"/>   
+<user username="admin" password="admin" roles="manager-gui,manager-script,manager-jmx,manager-status"/>
+<user username="deployer" password="deployer" roles="manager-script"/>
    16  vi ./webapps/examples/META-INF/context.xml
    17  vi ./webapps/host-manager/META-INF/context.xml
    18  vi ./webapps/manager/META-INF/context.xml
-   19   vi ./webapps/examples/META-INF/context.xml
+   -> in above 3 steps do the comments at valve like !--<........-->
    20  cd apache-tomcat-9.0.106/
    21  cd
    22  cd /bin
