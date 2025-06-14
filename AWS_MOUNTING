@@ -1,3 +1,16 @@
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+
+Step1:
+cd aws/
+aws configure
+access key: access key
+secret access key: secret key
+
+
 Step-2:- Install the dependencies.
  
 -> In CentOS or Red Hat
