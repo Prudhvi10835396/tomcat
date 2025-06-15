@@ -1,0 +1,19 @@
+create an instance 
+yum install docker
+yum install vsftpd -y
+yum install dns*
+yum install nfs-utils -y
+yum install cifs-utils -y
+cat > simple.txt
+cat simple.txt
+##############################
+now goto actions ->image and templates ->image name -devops
+disable reboot instance
+goto aws catalog and check status once its available delete the previous instance
+create new instance and keep ami catalog in place of amazon linux
+now connect with server -> gets error ->replace root with ec2-user in ssh link
+in terminal 
+# rpmquery docker
+# rpmquery cifs-utils
+# cat simple.txt
+matter should replace here
