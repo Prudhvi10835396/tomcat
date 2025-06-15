@@ -1,0 +1,29 @@
+create instance in one region.
+goto volumes -> create volume : 5g, useast1a, name-data vol
+attach volume , device-dev/sdb
+now connect instance 
+# sudo su -
+# lsblk
+# mkfs.ext4 /dev/sdb
+# mkdir data
+#  mount /dev/xvdb data
+# df -h
+# cd data/
+# touch devops.txt{1..10}
+# ll
+-------------------
+create snapshot in n.virginia from volume->actions-> create snapshot -> destination: east-2a
+goto ohio region
+and create an instance 
+goto snapshot -> create volume from snapshot -> attach volume with ohio instance server
+lsblk
+mkdir data
+mount /dev/xvdb data
+df -h
+cd data
+ll
+---------------
+for clearing do this outside data directory 
+umount data
+cd data 
+ll
