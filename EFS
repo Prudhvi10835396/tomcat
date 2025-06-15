@@ -1,0 +1,39 @@
+Create three instances
+ubuntu-1b, linux-1a, redhat-1c
+duplicate -> create efs
+connect three instances
+linux:
+# yum install nfs-utils -y
+same on redhat
+ubuntu:
+# sudo su -
+# apt-get update
+# apt install nfs-common
+# linux and redhat:
+# systemctl restart nfs-server
+# systemctl enable nfs-server
+# systemctl enable nfs-common.service
+-------------------------------------------
+now add nfs port to all the 3 servers
+create security group from dashboard give nfs
+goto efs -> clck on file system -> netowrk -> manage and change security groups to nfs security group
+------------------------
+# linux:
+  mkdir efs
+  paste the code from efs attach button -> mount via ip ->change the directory name with efs
+  df -h
+  cd /root/efs
+  touch devops.txt{1..100}
+  ll
+# redhat
+  mkdir devopt
+  paste the code from efs attach button -> mount via ip ->change the directory name with devopt
+  df -h
+  cd /root/devopt
+  ll
+# ubuntu
+  mkdir remote
+  paste the code from efs attach button -> mount via ip ->change the directory name with remote
+  df -h
+  cd /root/remote
+  ll
