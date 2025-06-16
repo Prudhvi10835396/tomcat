@@ -66,6 +66,9 @@ for mounting s3 bucket
 # s3fs sanjaynn /mnt -o passwd_file=/etc/passwd-s3fs
 
 #df -h
+# goto the mnt directory
+# ll
+check all the files in bucket will come
 
 Note For Redhat s3 Mounting
 s3fs -o iam_role="s3role" -o url="https://s3-ap-south-1.amazonaws.com" -o endpoint=ap-south-1 -o dbglevel=info -o curldbg -o allow_other -o use_cache=/tmp sanjaynetwork /var/s3fs-demofs
