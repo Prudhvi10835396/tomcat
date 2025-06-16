@@ -66,6 +66,7 @@ for mounting s3 bucket
 # s3fs sanjaynn /mnt -o passwd_file=/etc/passwd-s3fs
 
 #df -h
+# cd /mnt
 # goto the mnt directory
 # ll
 check all the files in bucket will come
