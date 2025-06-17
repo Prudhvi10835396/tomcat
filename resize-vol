@@ -24,3 +24,29 @@ growpart /dev/xvda
 growpart /dev/xvda 1
 xfs_growfs -d 
 df -h
+****Userdata******
+
+#!/bin/bash
+yum install http -y
+echo "This is jas" >> /var/www/html/index.html
+systemctl restart httpd
+systemctl enable httpd
+useradd jas -p redhat -c "password"
+
+**************Metadata************************
+ curl http://public_ip/latest/meta-dataX
+ wget http://s3.amazonaws.com/ec2metadata/ec2-metadata
+ chmod -u+x ec2-metadata
+ ll
+ ./ec2-metadata
+
+**************
+permenant data
+blkid -> copy the UID 
+vim /etc/fstab
+add the following connect 
+#mydisk
+UUId = copied id /data ext4 defaults 0 0
+#systemctl daemon-reload
+df -h 
+restart the instance
