@@ -1,0 +1,26 @@
+lsblk
+mkir test
+mount /dev/xvbd test (if does not work use : mkfs.ext4 /dev/sdb)
+df -h
+cd test
+blkid
+df -h
+========================================================================================
+how to increase the disk space
+select the new-data-vol and size = 8
+df -f
+blkid
+lsblk
+===========================================================================================
+how to resize
+resize2fs /dev/xvdb
+df -h
+cd /test
+================================================================================
+how to resize the root volume
+from dashboard increase the size of the data-vol to 15g
+lsblk
+growpart /dev/xvda
+growpart /dev/xvda 1
+xfs_growfs -d 
+df -h
